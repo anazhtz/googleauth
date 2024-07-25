@@ -39,6 +39,8 @@ class _RegistraionpageState extends State<Registraionpage> {
           "Success",
           "Registration successful!",
           snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Colors.green,
+          colorText: Colors.white,
         );
         Future.delayed(const Duration(seconds: 1), () {
           Get.to(() => const Loginpage());
@@ -48,6 +50,8 @@ class _RegistraionpageState extends State<Registraionpage> {
           "Error",
           errorMessage,
           snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Colors.red,
+          colorText: Colors.white,
         );
       }
     }

@@ -58,7 +58,11 @@ class FireHelper {
   }
 
   // Sign out method
-  Future<void> signOut() async {
-    await auth.signOut();
+   Future<void> signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+    } catch (e) {
+      print("Sign out error: $e");
+    }
   }
 }
